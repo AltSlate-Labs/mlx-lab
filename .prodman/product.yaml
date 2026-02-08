@@ -1,0 +1,51 @@
+# Product Definition
+schema_version: 1
+name: mlx-lab
+tagline: Local-first MLX fine-tuning toolkit for Apple Silicon
+description: |
+  mlx-lab is a macOS-only toolkit that provides a Python library and CLI
+  for discovering Hugging Face models and datasets, preparing high-quality
+  instruction data, and running reproducible MLX LoRA fine-tuning workflows.
+vision: |
+  Make small-model, data-first fine-tuning on Apple Silicon easy to run,
+  easy to reproduce, and easy to automate.
+principles:
+  - Simplicity over maximal configurability
+  - Reproducibility by default via uv-locked environments and deterministic transforms
+  - Data quality first, with auditable cleaning steps
+  - Local-first workflows with no required hosted services
+  - MLX-native implementation optimized for Apple Silicon
+okrs:
+  - id: OKR-1
+    objective: Make MLX fine-tuning accessible on Apple Silicon
+    key_results:
+      - Provide an end-to-end CLI workflow from discovery to fine-tune run
+      - Keep first successful LoRA run setup under 15 minutes on a clean machine
+      - Ensure core commands provide machine-readable output for automation
+  - id: OKR-2
+    objective: Deliver deterministic and auditable data workflows
+    key_results:
+      - Guarantee deterministic cleaned JSONL output for identical inputs and config
+      - Emit a run manifest with data and config fingerprints for every training run
+      - Fail fast on malformed records with clear validation diagnostics
+  - id: OKR-3
+    objective: Ship as a consumable Python package
+    key_results:
+      - Prepare package metadata and build pipeline for PyPI distribution
+      - Publish versioned CLI and library interfaces
+      - Provide quickstart docs for library and CLI usage
+target_users:
+  - segment: Apple Silicon developers
+    needs:
+      - Fast local experimentation without notebook sprawl
+      - Simple repeatable CLI commands
+  - segment: Applied ML engineers
+    needs:
+      - Domain-specific dataset curation and data cleaning
+      - Reliable LoRA fine-tuning workflows on small models
+  - segment: Agent and automation builders
+    needs:
+      - Deterministic and scriptable operations
+      - Structured logs and outputs for orchestration
+created_at: 2026-02-06
+updated_at: 2026-02-06

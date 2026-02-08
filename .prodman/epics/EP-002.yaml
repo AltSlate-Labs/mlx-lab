@@ -1,0 +1,27 @@
+# Epic Definition
+id: "EP-002"
+title: "Implement dataset discovery and metadata inspection"
+status: complete
+priority: p1
+owner: null
+milestone: "MS-002"
+spec: "SPEC-002"
+description: |
+  Provide Hugging Face dataset discovery and inspection commands so users can
+  find candidate datasets, filter by practical constraints, and inspect schema
+  and split metadata before curation.
+acceptance_criteria:
+  - "`mlx-lab dataset search <query>` returns dataset results with pagination and limit support."
+  - "Search supports practical filters including language, task tags, and license when metadata exists."
+  - "`mlx-lab dataset inspect <dataset_id>` shows splits, feature schema, and dataset card summary."
+  - "All dataset commands support `--json` for automation and agent workflows."
+  - "Network/API errors return actionable diagnostics and non-zero exit codes."
+dependencies:
+  - "EP-001"
+issues: []
+labels:
+  - data
+  - discovery
+target_date: 2026-03-05
+created_at: "2026-02-06"
+updated_at: "2026-02-06"

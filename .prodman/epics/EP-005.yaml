@@ -1,0 +1,29 @@
+# Epic Definition
+id: "EP-005"
+title: "Deliver LoRA-first MLX fine-tuning workflow"
+status: complete
+priority: p1
+owner: null
+milestone: "MS-003"
+spec: "SPEC-005"
+description: |
+  Implement the core MLX training workflow centered on LoRA fine-tuning using
+  cleaned JSONL datasets and selected models, including preflight validation,
+  checkpointing, and resumable runs.
+acceptance_criteria:
+  - "`mlx-lab train lora` accepts model, cleaned dataset, and train config inputs."
+  - "Command performs preflight validation for dataset schema, file integrity, and required runtime dependencies."
+  - "Training produces adapter checkpoints in a run directory with periodic saves."
+  - "Interrupted runs can resume from the latest checkpoint."
+  - "Structured logs include step, loss, and throughput metrics for each run."
+dependencies:
+  - "EP-003"
+  - "EP-004"
+issues: []
+labels:
+  - training
+  - mlx
+  - lora
+target_date: 2026-04-20
+created_at: "2026-02-06"
+updated_at: "2026-02-06"

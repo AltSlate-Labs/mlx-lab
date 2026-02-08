@@ -1,0 +1,58 @@
+# Product Roadmap
+schema_version: 1
+milestones:
+  - id: "MS-001"
+    title: "Foundation and project scaffolding"
+    status: complete
+    outcome: >
+      Establish package structure, CLI shell, platform guards, and uv-based
+      reproducible development environment.
+    epics:
+      - "EP-001"
+    target_date: 2026-02-20
+  - id: "MS-002"
+    title: "Data discovery and cleaning pipeline"
+    status: complete
+    outcome: >
+      Enable dataset discovery, curation metadata, and deterministic
+      prompt/completion JSONL generation.
+    epics:
+      - "EP-002"
+      - "EP-003"
+    target_date: 2026-03-20
+  - id: "MS-003"
+    title: "Model discovery and MLX LoRA training"
+    status: complete
+    outcome: >
+      Deliver model discovery and a runnable LoRA-first fine-tuning workflow
+      on MLX.
+    epics:
+      - "EP-004"
+      - "EP-005"
+    target_date: 2026-04-20
+  - id: "MS-004"
+    title: "Reproducibility, QA, and release readiness"
+    status: complete
+    outcome: >
+      Add deterministic run tracking, validation, packaging, and docs for an
+      initial PyPI-ready release.
+    epics:
+      - "EP-006"
+      - "EP-007"
+    target_date: 2026-05-20
+releases:
+  - version: "0.1.0"
+    name: "local-first-baseline"
+    status: in_progress
+    milestone_target: "MS-004"
+    scope:
+      - Deterministic data pipeline to instruction JSONL
+      - Model and dataset discovery commands
+      - MLX LoRA fine-tuning workflow
+      - Packaged library and CLI suitable for PyPI publication
+    notes:
+      - "Release prep in progress; validation checks passing"
+      - "ISS-001 remains open and non-blocking for 0.1.0"
+      - "twine artifact metadata checks passed for sdist and wheel"
+    target_date: 2026-05-31
+updated_at: 2026-02-07

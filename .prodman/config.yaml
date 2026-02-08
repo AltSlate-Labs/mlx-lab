@@ -1,0 +1,16 @@
+# git-prodman Repository Configuration
+schema_version: 1
+project:
+  name: mlx-lab
+  description: Local-first MLX toolkit for deterministic small-model fine-tuning.
+  default_branch: main
+sync:
+  remote: origin
+  auto_push: false
+  branch_strategy: direct
+counters:
+  epic: 7
+  spec: 7
+  decision: 0
+  issue: 1
+  journey: 0

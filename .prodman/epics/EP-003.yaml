@@ -1,0 +1,29 @@
+# Epic Definition
+id: "EP-003"
+title: "Build deterministic dataset cleaning and reshape pipeline"
+status: complete
+priority: p1
+owner: null
+milestone: "MS-002"
+spec: "SPEC-003"
+description: |
+  Create a deterministic pipeline that transforms raw dataset records into
+  instruction-style JSONL with prompt/completion pairs, plus validation and
+  audit metadata for reproducible data preparation.
+acceptance_criteria:
+  - "`mlx-lab data clean` supports mapping source fields or templates into `prompt` and `completion`."
+  - "Transform order and output ordering are deterministic for identical inputs and config."
+  - "Pipeline validates records and reports dropped/invalid counts with reasons."
+  - "Output is UTF-8 JSONL with exactly one object per line containing `prompt` and `completion`."
+  - "A data manifest captures source dataset version, transform config hash, and output checksum."
+dependencies:
+  - "EP-001"
+  - "EP-002"
+issues: []
+labels:
+  - data
+  - quality
+  - reproducibility
+target_date: 2026-03-20
+created_at: "2026-02-06"
+updated_at: "2026-02-06"

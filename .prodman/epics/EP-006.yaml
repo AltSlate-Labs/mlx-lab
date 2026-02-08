@@ -1,0 +1,27 @@
+# Epic Definition
+id: "EP-006"
+title: "Add deterministic experiment manifests and run replay"
+status: complete
+priority: p1
+owner: null
+milestone: "MS-004"
+spec: "SPEC-006"
+description: |
+  Capture complete provenance for data and training runs so experiments are
+  reproducible and auditable. Provide replay and comparison tooling for
+  iteration workflows.
+acceptance_criteria:
+  - "Each training run writes a manifest with model, dataset, config, environment, and seed details."
+  - "Manifest includes checksums or fingerprints for cleaned data and effective training config."
+  - "`mlx-lab run replay <run_id_or_manifest>` can recreate the same run inputs and launch training."
+  - "`mlx-lab run compare <run_a> <run_b>` reports metric deltas and key configuration differences."
+  - "Reproducibility behavior and limits are documented with deterministic defaults."
+dependencies:
+  - "EP-005"
+issues: []
+labels:
+  - reproducibility
+  - experiments
+target_date: 2026-05-05
+created_at: "2026-02-06"
+updated_at: "2026-02-06"

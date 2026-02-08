@@ -1,0 +1,23 @@
+id: "ISS-001"
+title: "Editable install requires network to resolve setuptools backend"
+type: bug
+status: planned
+priority: p2
+epic: "EP-001"
+description: |
+  Installing mlx-lab in an isolated environment can fail when network access is
+  unavailable because the build backend dependency (`setuptools`) is resolved
+  from package indexes during build isolation.
+
+  Impact:
+  - Prevents fully offline editable installs in constrained environments
+  - Can block CI or local setups without index connectivity
+assignee: null
+reporter: null
+labels:
+  - packaging
+  - offline
+  - build
+created_at: "2026-02-06"
+updated_at: "2026-02-06"
+
